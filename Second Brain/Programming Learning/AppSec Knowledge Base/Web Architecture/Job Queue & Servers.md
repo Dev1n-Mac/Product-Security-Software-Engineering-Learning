@@ -1,0 +1,4 @@
+
+- **Job queues** store a list of jobs that need to be run asynchronously. The simplest are **first-in-first-out (FIFO)** queues though most applications end up needing some sort of priority queuing system. Whenever the app needs a job to be run, either on some sort of regular schedule or as determined by user actions, it simply adds the appropriate job to the queue.
+	- **Priority Queue:** Ensure that time-sensitive operations like sending password reset emails were completed ASAP.
+- **Job servers** process jobs. They poll the job queue to determine if there’s work to do and if there is, they pop a job off the queue and execute it.
